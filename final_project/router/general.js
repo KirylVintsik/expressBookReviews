@@ -65,7 +65,8 @@ public_users.get('/author/:author', async (req, res) => {
     const bookList = await new Promise((resolve) => {
       setTimeout(() => {
         const filtered = Object.values(books).filter(
-          (book) => book.author.toLocaleLowerCase() === author.toLocaleLowerCase(),
+          (book) =>
+            book.author.toLocaleLowerCase() === author.toLocaleLowerCase(),
         );
         resolve(filtered);
       }, 0);
@@ -83,7 +84,8 @@ public_users.get('/title/:title', async (req, res) => {
     const bookList = await new Promise((resolve) => {
       setTimeout(() => {
         const filtered = Object.values(books).filter(
-          (book) => book.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
+          (book) =>
+            book.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
         );
         resolve(filtered);
       }, 0);

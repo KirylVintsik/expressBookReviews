@@ -1,0 +1,6 @@
+curl -X PUT \ 
+  "http://localhost:3000/customer/auth/review/1?review=deeznuts" -b cookie.txt
+{"message":"Review added/updated successfully"}%                                                      
+
+curl http://localhost:3000/review/1
+{"user1":"deeznuts"}%                      
